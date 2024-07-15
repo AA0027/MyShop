@@ -110,10 +110,10 @@ public enum ProductInkColor {
 - [x] 임의로 이동되는 경우에 대비하여 `삭제자`를 명시하며, 관리자는 기한 내 이를 복구할 수 있는 권한이 있습니다.
 </details>
 
-|<small>회원가입</small>|
+|<small>회원가입</small>|<small>이메일인증 및 신규적립금혜택<small>|<small>아이디찾기/비밀번호찾기</small>|
 |:-:|:-:|:-:|
 |![003](https://github.com/rhjdev/geulbeotmall/assets/95993932/dbb1b387-fb7f-461b-af19-3ec222d1d110)|![004](https://github.com/rhjdev/geulbeotmall/assets/95993932/99faf0a1-0197-4a29-8110-2d89314555a7)|![005](https://github.com/rhjdev/geulbeotmall/assets/95993932/42f13241-98d0-4345-895c-ce2dfc75a968)|
-|<small><b>임시비밀번호발송 및 회원정보수정</b></small>|<small><b>소셜로그인(네이버)</b></small>|<small><b>소셜로그인(네이버)</b></small>|
+|<small><b>임시비밀번호발송 및 회원정보수정</b></small>|<small><b>소셜로그인(카카오)</b></small>|<small><b>소셜로그인(구글)</b></small>|
 |![006](https://github.com/rhjdev/geulbeotmall/assets/95993932/d3d89f06-1a07-41e2-8d69-83ab172fdff0)|![007](https://github.com/rhjdev/geulbeotmall/assets/95993932/ed538d0d-1f0c-4bf5-8dfd-1543db876983)|![008](https://github.com/rhjdev/geulbeotmall/assets/95993932/82878195-95fc-43a2-ba78-9905f07f1240)|
 |<small><b>상품조회(브랜드,가격범위,태그별)</b></small>|<small><b>상품조회(섹션별)</b></small>|<small><b>상품조회(색상필터별)</b></small>|
 |![009](https://github.com/rhjdev/geulbeotmall/assets/95993932/e51e0c4f-a129-482d-a8df-fe8d92c9eb92)|![010](https://github.com/rhjdev/geulbeotmall/assets/95993932/03056c26-3fd4-4103-9aa8-fd9e02dda7dd)|![011](https://github.com/rhjdev/geulbeotmall/assets/95993932/c9dd3b41-584e-4499-9b67-cfc86717a87b)|
