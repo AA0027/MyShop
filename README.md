@@ -96,29 +96,11 @@ public enum ProductInkColor {
 - [x] 일반 로그인의 경우 회원가입 양식 작성 후 이메일 인증을 거쳐야 하는 반면, 소셜 로그인한 회원은 `해당 계정에서 불러온 이름 및 이메일 정보가 연동`돼 입력란을 채우며 나아가 별도의 이메일 인증 없이 곧바로 이용이 가능합니다 .
 </details>
 
-|<small>회원가입</small>|<small>이메일인증 및 신규적립금혜택<small>|<small>아이디찾기/비밀번호찾기</small>|
+|<small>회원가입</small>|<small>제품 추천 및 카테고리별 조회<small>|<small>제품 장바구니 및 바로구</small>|
 |:-:|:-:|:-:|
 |![003](https://github.com/rhjdev/geulbeotmall/assets/95993932/dbb1b387-fb7f-461b-af19-3ec222d1d110)|![004](https://github.com/rhjdev/geulbeotmall/assets/95993932/99faf0a1-0197-4a29-8110-2d89314555a7)|![005](https://github.com/rhjdev/geulbeotmall/assets/95993932/42f13241-98d0-4345-895c-ce2dfc75a968)|
-|<small><b>임시비밀번호발송 및 회원정보수정</b></small>|<small><b>소셜로그인(카카오)</b></small>|<small><b>소셜로그인(구글)</b></small>|
+|<small><b>리뷰작성 및 결제취소요청청</b></small>|<small><b>소셜로그인(네이버)</b></small>|<small><b>관리자 페이지</b></small>|
 |![006](https://github.com/rhjdev/geulbeotmall/assets/95993932/d3d89f06-1a07-41e2-8d69-83ab172fdff0)|![007](https://github.com/rhjdev/geulbeotmall/assets/95993932/ed538d0d-1f0c-4bf5-8dfd-1543db876983)|![008](https://github.com/rhjdev/geulbeotmall/assets/95993932/82878195-95fc-43a2-ba78-9905f07f1240)|
-|<small><b>상품조회(브랜드,가격범위,태그별)</b></small>|<small><b>상품조회(섹션별)</b></small>|<small><b>상품조회(색상필터별)</b></small>|
-|![009](https://github.com/rhjdev/geulbeotmall/assets/95993932/e51e0c4f-a129-482d-a8df-fe8d92c9eb92)|![010](https://github.com/rhjdev/geulbeotmall/assets/95993932/03056c26-3fd4-4103-9aa8-fd9e02dda7dd)|![011](https://github.com/rhjdev/geulbeotmall/assets/95993932/c9dd3b41-584e-4499-9b67-cfc86717a87b)|
-|<small><b>찜하기</b></small>|<small><b>상품검색 및 장바구니</b></small>|<small><b>최초 주문 전 휴대폰 인증</b></small>|
-|![012](https://github.com/rhjdev/geulbeotmall/assets/95993932/2fd77cbd-989f-4fb6-8e58-f5da10d85567)|![013](https://github.com/rhjdev/geulbeotmall/assets/95993932/3bc2e2ae-d3b2-4341-8536-a2fbf2ae5f3b)|![014](https://github.com/rhjdev/geulbeotmall/assets/95993932/823a6540-b75d-45a3-976c-1befa69ec5f8)|
-|<small><b>장바구니 주문</b></small>|<small><b>바로주문</b></small>|<small><b>문의게시글 등록</b></small>
-|![015](https://github.com/rhjdev/geulbeotmall/assets/95993932/091dbeb7-45ef-4def-85e0-8b90a4a35bd4)|![016](https://github.com/rhjdev/geulbeotmall/assets/95993932/89df0fbd-fb6b-462f-b4ee-3583113ef268)|![017](https://github.com/rhjdev/geulbeotmall/assets/95993932/649b1110-0da4-4420-a43c-ff5d80e283a1)|
-|<small><b>댓글/대댓글 실시간 알림</b></small>|<small><b>댓글 수정,삭제 및 첨부파일 다운로드</b></small>|<small><b>상품출고/배송완료 실시간 알림<b></small>|
-![018](https://github.com/rhjdev/geulbeotmall/assets/95993932/c74ffaaa-e2a8-4535-b355-8f0236155f74)|![019](https://github.com/rhjdev/geulbeotmall/assets/95993932/1886ef53-5e89-4fb3-9c6f-e40124ef5e0b)|![020](https://github.com/rhjdev/geulbeotmall/assets/95993932/8b8783b8-b42f-4632-a812-88005ad5552e)|
-|<small><b>알림 삭제</b></small>|<small><b>텍스트리뷰 등록</b></small>|<small><b>사진리뷰 등록</b></small>|
-|![023](https://github.com/rhjdev/geulbeotmall/assets/95993932/1e7fa9d1-81e7-4096-8cdd-ef45f34334f3)|![024](https://github.com/rhjdev/geulbeotmall/assets/95993932/610c8e6d-7d4c-4d25-be14-08152389661d)|![025](https://github.com/rhjdev/geulbeotmall/assets/95993932/7f2e1e73-5306-4b98-94ba-db0be3792ac5)|
-|<small><b>디자인관리(슬라이드/이벤트배너 등록,수정)</b></small>|<small><b>기간별통계관리(조회,엑셀다운로드)</b></small>|<small><b>게시글관리(검색,조회,삭제,복구)</b></small>|
-![001](https://github.com/rhjdev/geulbeotmall/assets/95993932/94085e0c-8a0d-40c6-9dbf-cf43aa27f24b)|![026](https://github.com/rhjdev/geulbeotmall/assets/95993932/4523100d-4864-4160-90bb-1cebfae6162c)|![027](https://github.com/rhjdev/geulbeotmall/assets/95993932/02c3fe78-3491-4a54-ad20-7ba18b8ed0b6)
-|<small><b>댓글관리(검색,조회,삭제,복구)</b></small>|<small><b>문의게시글 수정,삭제</b></small>|<small><b>문의게시판 검색(글/댓글,작성자,말머리별)</b></small>|
-|![028](https://github.com/rhjdev/geulbeotmall/assets/95993932/740a82dc-208d-4d93-a8ad-6765d501fa64)|![021](https://github.com/rhjdev/geulbeotmall/assets/95993932/5e00163f-bb8b-4b17-a7b8-fcf8230301ad)|![022](https://github.com/rhjdev/geulbeotmall/assets/95993932/89fbb68a-b952-4118-ba42-853fdae21b6f)|
-|<small><b>상품관리(판매상태 변경)</b></small>|<small><b>상품관리(상품 등록)</b></small>|<small><b>전체상품조회(정렬별)</b></small>|
-|![029](https://github.com/rhjdev/geulbeotmall/assets/95993932/aac750c9-b57f-4eb9-b742-9f9796f27bb6)|![030](https://github.com/rhjdev/geulbeotmall/assets/95993932/04706054-cfd8-469f-ab25-1b319bcec709)|![031](https://github.com/rhjdev/geulbeotmall/assets/95993932/b7b5dd8f-5f45-4065-b33d-39b84d3600ac)|
-|<small><b>찜한상품 삭제 및 회원탈퇴</b></small>|<small><b>회원관리(계정정지/해제,누적경고수조회)</b></small>|<small><b>회원관리(관리자권한부여)</b></small>|
-|![032](https://github.com/rhjdev/geulbeotmall/assets/95993932/ffdf2c5a-e78e-444c-9a1d-f4dad7d420e0)|![033](https://github.com/rhjdev/geulbeotmall/assets/95993932/e8b6b870-916d-4055-aaa9-12176a14889a)|![034](https://github.com/rhjdev/geulbeotmall/assets/95993932/13236b06-9a51-445e-ad82-4a6ca8dfab0f)|
 
 ### 🛠기술 스택
 OS | Windows 10
