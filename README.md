@@ -134,7 +134,8 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 ![architecture](https://github.com/rhjdev/geulbeotmall/assets/95993932/763bed5a-9985-4aca-9924-ed73d5a904e1)
 
 ### 📖ERD
-![erd](https://github.com/AA0027/Shop/issues/1#issue-2410639833)
-<img src="https://github.com/AA0027/Shop/issues/1#issue-2410639833/shop_erd.png">
+![erd](https://github.com/user-attachments/assets/08fe6d79-9dac-4707-beb5-0231c65c132e)
+
+
 
 
