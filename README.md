@@ -25,7 +25,7 @@
 ```
 
 <details>
-<summary>핵심기능 #1. 실시간 알림</summary>
+<summary>핵심기능 #1. 카테고리별 제품 조회, main 페이지 제품 추천</summary>
 
 ![fuction001](https://github.com/rhjdev/geulbeotmall/assets/95993932/ed48456e-a80e-4fbb-8f4a-36d895d8f0bc)
 - [x] `댓글/대댓글/상품출고/배송완료`에 대해 Server to Client로의 단방향 통신이 가능한 Server-Sent Events(SSE) 기반으로 실시간 알림 기능을 제공합니다.
@@ -33,7 +33,7 @@
 - [x] 회원이 `로그아웃한 사이 발생한 이벤트 역시 재로그인 후 알림 목록에서 확인`할 수가 있습니다. 
 </details>
 <details>
-<summary>핵심기능 #2. 전체 상품 검색</summary>
+<summary>핵심기능 #2. 제품 장바구니 및 바로구매</summary>
 
 ![fuction002](https://github.com/rhjdev/geulbeotmall/assets/95993932/42912cf3-1824-4c99-a6ac-01c9b098fd7b)
 - [x] 검색 키워드로서 문자, 숫자 모두 취급해 `상품명, 브랜드명, 주요태그`는 물론 `심두께별 검색`이 가능합니다.
@@ -57,7 +57,7 @@ WHERE A.PROD_AVAIL_YN = 'Y' <!-- 판매중인 상품에 한하여 검색 -->
 ```
 </details>
 <details>
-<summary>핵심기능 #3. 잉크색상별 검색 필터</summary>
+<summary>핵심기능 #3. 결제한 상품에대한 리뷰작성 및 결제 취소요청</summary>
 
 ![fuction003](https://github.com/rhjdev/geulbeotmall/assets/95993932/b1555bac-bccc-4754-a74c-e4ab97a3a53d)
 - [x] 색상들을 `Enum` 상수 필드로 정의하고, 각각 `DB 저장에 쓰일 값(value)/사용자 화면에 보일 이름(label)/스타일 적용 용도의 헥스코드(color)`와 같은 데이터를 명시한 후 생성자 통해 호출 및 활용하였습니다.
@@ -77,14 +77,14 @@ public enum ProductInkColor {
 ```
 </details>
 <details>
-<summary>핵심기능 #4. 최근 본 상품 목록/비로그인 장바구니</summary>
+<summary>핵심기능 #4. 계시글 작성</summary>
 
 ![fuction004](https://github.com/rhjdev/geulbeotmall/assets/95993932/aed5de29-cbac-4619-b66c-648153d60b8b)
 - [x] 로그인 여부에 상관 없이 접속 이래 현재까지 조회한 상품 목록을 `@SessionAttributes` 어노테이션 통해 세션상에 `recentlyViewed` 이름으로 계속 기록합니다. 이후 로그인하게 되면 회원은 `마이페이지 메인에서 해당 목록을 확인`할 수 있습니다.
 - [x] 비로그인 상태에서 담은 장바구니 상품은 마찬가지로 `@SessionAttributes` 어노테이션 통해 세션상에 `geulbeotCart`로서 기록됩니다. 이어서 로그인이 발생할 경우 `회원의 장바구니 목록으로 연동 및 저장`됩니다.
 </details>
 <details>
-<summary>핵심기능 #5. 이메일 발송</summary>
+<summary>핵심기능 #5. 관리자 페이지</summary>
 
 ![fuction005](https://github.com/rhjdev/geulbeotmall/assets/95993932/5ec2b61a-36b8-458e-9ee8-0cd250dc7bb4)
 - [x] `JavaMailSender`를 이용해 이메일 인증 및 임시 비밀번호 발송 기능을 구현하였습니다.
@@ -95,43 +95,7 @@ public enum ProductInkColor {
 
 - [x] 일반 로그인의 경우 회원가입 양식 작성 후 이메일 인증을 거쳐야 하는 반면, 소셜 로그인한 회원은 `해당 계정에서 불러온 이름 및 이메일 정보가 연동`돼 입력란을 채우며 나아가 별도의 이메일 인증 없이 곧바로 이용이 가능합니다.
 </details>
-<details>
-<summary>핵심기능 #7. 적립금 혜택</summary>
 
-- [x] 일반 로그인/소셜 로그인 구분 없이 모든 신규 회원은 `가입과 동시에 2,000원의 적립금`을 적립 받습니다.
-- [x] `텍스트리뷰 100원/사진리뷰 300원`으로 적립금 혜택이 주어집니다. 따라서 1)작성자는 작성일로부터 7일 경과 후 게시글 삭제가 가능하며, 2)텍스트리뷰 수정 시 파일 추가가 이뤄진다면 차액을 추가로 적립 받습니다.
-- [x] 회원은 `마이페이지`에서 자신의 적립금 적립/사용 상세 내역을 확인할 수 있습니다.
-</details>
-<details>
-<summary>핵심기능 #8. 휴지통 이동</summary>
-
-- [x] 게시글/댓글은 삭제 시 `휴지통`에 저장돼 `100일의 복구기한`이 주어지고, 만료일이 도래하면 자동 영구 삭제됩니다.
-- [x] 임의로 이동되는 경우에 대비하여 `삭제자`를 명시하며, 관리자는 기한 내 이를 복구할 수 있는 권한이 있습니다.
-</details>
-
-|<small>회원가입</small>|<small>이메일인증 및 신규적립금혜택<small>|<small>아이디찾기/비밀번호찾기</small>|
-|:-:|:-:|:-:|
-|![003](https://github.com/rhjdev/geulbeotmall/assets/95993932/dbb1b387-fb7f-461b-af19-3ec222d1d110)|![004](https://github.com/rhjdev/geulbeotmall/assets/95993932/99faf0a1-0197-4a29-8110-2d89314555a7)|![005](https://github.com/rhjdev/geulbeotmall/assets/95993932/42f13241-98d0-4345-895c-ce2dfc75a968)|
-|<small><b>임시비밀번호발송 및 회원정보수정</b></small>|<small><b>소셜로그인(카카오)</b></small>|<small><b>소셜로그인(구글)</b></small>|
-|![006](https://github.com/rhjdev/geulbeotmall/assets/95993932/d3d89f06-1a07-41e2-8d69-83ab172fdff0)|![007](https://github.com/rhjdev/geulbeotmall/assets/95993932/ed538d0d-1f0c-4bf5-8dfd-1543db876983)|![008](https://github.com/rhjdev/geulbeotmall/assets/95993932/82878195-95fc-43a2-ba78-9905f07f1240)|
-|<small><b>상품조회(브랜드,가격범위,태그별)</b></small>|<small><b>상품조회(섹션별)</b></small>|<small><b>상품조회(색상필터별)</b></small>|
-|![009](https://github.com/rhjdev/geulbeotmall/assets/95993932/e51e0c4f-a129-482d-a8df-fe8d92c9eb92)|![010](https://github.com/rhjdev/geulbeotmall/assets/95993932/03056c26-3fd4-4103-9aa8-fd9e02dda7dd)|![011](https://github.com/rhjdev/geulbeotmall/assets/95993932/c9dd3b41-584e-4499-9b67-cfc86717a87b)|
-|<small><b>찜하기</b></small>|<small><b>상품검색 및 장바구니</b></small>|<small><b>최초 주문 전 휴대폰 인증</b></small>|
-|![012](https://github.com/rhjdev/geulbeotmall/assets/95993932/2fd77cbd-989f-4fb6-8e58-f5da10d85567)|![013](https://github.com/rhjdev/geulbeotmall/assets/95993932/3bc2e2ae-d3b2-4341-8536-a2fbf2ae5f3b)|![014](https://github.com/rhjdev/geulbeotmall/assets/95993932/823a6540-b75d-45a3-976c-1befa69ec5f8)|
-|<small><b>장바구니 주문</b></small>|<small><b>바로주문</b></small>|<small><b>문의게시글 등록</b></small>
-|![015](https://github.com/rhjdev/geulbeotmall/assets/95993932/091dbeb7-45ef-4def-85e0-8b90a4a35bd4)|![016](https://github.com/rhjdev/geulbeotmall/assets/95993932/89df0fbd-fb6b-462f-b4ee-3583113ef268)|![017](https://github.com/rhjdev/geulbeotmall/assets/95993932/649b1110-0da4-4420-a43c-ff5d80e283a1)|
-|<small><b>댓글/대댓글 실시간 알림</b></small>|<small><b>댓글 수정,삭제 및 첨부파일 다운로드</b></small>|<small><b>상품출고/배송완료 실시간 알림<b></small>|
-![018](https://github.com/rhjdev/geulbeotmall/assets/95993932/c74ffaaa-e2a8-4535-b355-8f0236155f74)|![019](https://github.com/rhjdev/geulbeotmall/assets/95993932/1886ef53-5e89-4fb3-9c6f-e40124ef5e0b)|![020](https://github.com/rhjdev/geulbeotmall/assets/95993932/8b8783b8-b42f-4632-a812-88005ad5552e)|
-|<small><b>알림 삭제</b></small>|<small><b>텍스트리뷰 등록</b></small>|<small><b>사진리뷰 등록</b></small>|
-|![023](https://github.com/rhjdev/geulbeotmall/assets/95993932/1e7fa9d1-81e7-4096-8cdd-ef45f34334f3)|![024](https://github.com/rhjdev/geulbeotmall/assets/95993932/610c8e6d-7d4c-4d25-be14-08152389661d)|![025](https://github.com/rhjdev/geulbeotmall/assets/95993932/7f2e1e73-5306-4b98-94ba-db0be3792ac5)|
-|<small><b>디자인관리(슬라이드/이벤트배너 등록,수정)</b></small>|<small><b>기간별통계관리(조회,엑셀다운로드)</b></small>|<small><b>게시글관리(검색,조회,삭제,복구)</b></small>|
-![001](https://github.com/rhjdev/geulbeotmall/assets/95993932/94085e0c-8a0d-40c6-9dbf-cf43aa27f24b)|![026](https://github.com/rhjdev/geulbeotmall/assets/95993932/4523100d-4864-4160-90bb-1cebfae6162c)|![027](https://github.com/rhjdev/geulbeotmall/assets/95993932/02c3fe78-3491-4a54-ad20-7ba18b8ed0b6)
-|<small><b>댓글관리(검색,조회,삭제,복구)</b></small>|<small><b>문의게시글 수정,삭제</b></small>|<small><b>문의게시판 검색(글/댓글,작성자,말머리별)</b></small>|
-|![028](https://github.com/rhjdev/geulbeotmall/assets/95993932/740a82dc-208d-4d93-a8ad-6765d501fa64)|![021](https://github.com/rhjdev/geulbeotmall/assets/95993932/5e00163f-bb8b-4b17-a7b8-fcf8230301ad)|![022](https://github.com/rhjdev/geulbeotmall/assets/95993932/89fbb68a-b952-4118-ba42-853fdae21b6f)|
-|<small><b>상품관리(판매상태 변경)</b></small>|<small><b>상품관리(상품 등록)</b></small>|<small><b>전체상품조회(정렬별)</b></small>|
-|![029](https://github.com/rhjdev/geulbeotmall/assets/95993932/aac750c9-b57f-4eb9-b742-9f9796f27bb6)|![030](https://github.com/rhjdev/geulbeotmall/assets/95993932/04706054-cfd8-469f-ab25-1b319bcec709)|![031](https://github.com/rhjdev/geulbeotmall/assets/95993932/b7b5dd8f-5f45-4065-b33d-39b84d3600ac)|
-|<small><b>찜한상품 삭제 및 회원탈퇴</b></small>|<small><b>회원관리(계정정지/해제,누적경고수조회)</b></small>|<small><b>회원관리(관리자권한부여)</b></small>|
-|![032](https://github.com/rhjdev/geulbeotmall/assets/95993932/ffdf2c5a-e78e-444c-9a1d-f4dad7d420e0)|![033](https://github.com/rhjdev/geulbeotmall/assets/95993932/e8b6b870-916d-4055-aaa9-12176a14889a)|![034](https://github.com/rhjdev/geulbeotmall/assets/95993932/13236b06-9a51-445e-ad82-4a6ca8dfab0f)|
 
 ### 🛠기술 스택
 OS | Windows 10
