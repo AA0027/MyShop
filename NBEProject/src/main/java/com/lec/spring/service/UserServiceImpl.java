@@ -1,5 +1,6 @@
 package com.lec.spring.service;
 
+import com.lec.spring.config.PrincipalDetails;
 import com.lec.spring.domain.shop.Address;
 import com.lec.spring.domain.shop.Authority;
 import com.lec.spring.domain.User;
@@ -126,12 +127,12 @@ public class UserServiceImpl implements UserService {
         User user = userRepo.selectById(userId);
         if (user != null) {
             if (status) {
-                authorityRepo.updateAuthority(userId, 1); // 활성 상태 설정 시 권한 1로 업데이트
+//                authorityRepo.updateAuthority(userId, 2); // 활성 상태 설정 시 권한 1로 업데이트
                 user.setStatus(true);
 
             } else {
-                authorityRepo.updateAuthority(userId, 4); // 비활성 상태로 설정 시 권한 3으로 업데이트
                 user.setStatus(false);
+                System.out.println("hello");
             }
             userRepo.updateStatus(userId, user.isStatus()); // DB에 변경
         }

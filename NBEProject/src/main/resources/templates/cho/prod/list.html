@@ -30,7 +30,7 @@
 
             <div class="product-item"  th:each="item : ${list}">
                 <a th:href="@{'/nbe/detail/' + ${item.goods_no}}">
-                    <img th:src="${item.image_1}" alt="Product 1">
+                    <img th:src="${item.image}" alt="Product 1">
                 </a>
                 <div class="product-info">
                     <span class="tag new">N</span>

@@ -3,13 +3,13 @@
 <mapper namespace="com.lec.spring.repository.UserRepo">
     <insert id="insert" parameterType="com.lec.spring.domain.User"
     useGeneratedKeys="true" keyProperty="id" keyColumn="id">
-        INSERT INTO user (id, username, password, regdate, name, phone, birth, email, gender, profileimage, grade, total_price, point)
-        VALUE (#{id}, #{username}, #{password}, #{regdate}, #{name}, #{phone}, #{birth}, #{email}, #{gender}, #{profileimage}, #{grade}, #{total_price}, #{point})
+        INSERT INTO user (id, username, password, regdate, name, phone, birth, email, gender, profileimage, grade, total_price)
+        VALUE (#{id}, #{username}, #{password}, #{regdate}, #{name}, #{phone}, #{birth}, #{email}, #{gender}, #{profileimage}, #{grade}, #{total_price})
     </insert>
 
     <insert id="insertOAuth" parameterType="com.lec.spring.domain.User" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
-        INSERT INTO user (id, username, password, regdate, name, email, provider, providerId, phone, birth)
-        VALUE (#{id}, #{username}, #{password}, #{regdate}, #{name}, #{email}, #{provider}, #{providerId}, #{phone}, #{birth})
+        INSERT INTO user (id, username, password, regdate, name, email, phone, birth)
+        VALUE (#{id}, #{username}, #{password}, #{regdate}, #{name}, #{email}, #{phone}, #{birth})
     </insert>
 
     <insert id="saveUser" parameterType="com.lec.spring.dto.UserDto">
@@ -40,15 +40,13 @@
             phone=#{phone},
             email=#{email},
             profileimage=#{profileimage},
-            grade=#{grade},
-            total_price=#{total_price},
-            point=#{point}
+            grade=#{grade}
         WHERE
             id=#{id}
 
     </update>
     <sql id="SELECT_BASE">
-        SELECT id, username, password, regdate, name, phone, birth, email, gender, profileimage, grade, total_price, point, provider, providerId,
+        SELECT id, username, password, regdate, name, phone, birth, email, gender, profileimage, grade , total_price,
                IF(status = 1, true, false) AS status
         FROM user
         WHERE 1=1

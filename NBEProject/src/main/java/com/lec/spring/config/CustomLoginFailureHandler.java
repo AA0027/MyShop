@@ -1,8 +1,11 @@
 package com.lec.spring.config;
 
+import com.lec.spring.util.U;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import jakarta.websocket.Session;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.CredentialsExpiredException;
 import org.springframework.security.authentication.DisabledException;
@@ -36,8 +39,10 @@ public class CustomLoginFailureHandler implements AuthenticationFailureHandler {
         }
         System.out.println(errorMessage);
 
-        request.setAttribute("errorMessage", errorMessage);
-        request.setAttribute("username", request.getParameter("username"));
+//        request.setAttribute("errorMessage", errorMessage);
+//        request.setAttribute("username", request.getParameter("username"));
+        HttpSession session = U.getSession();
+        session.setAttribute("errorMessage", errorMessage);
 
         response.sendRedirect("/user/login?error=true");
 

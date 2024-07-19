@@ -8,8 +8,14 @@ import java.util.List;
 
 public interface GoodsRepo {
     List<Goods> selectByCategory(String category1, String category2, int from, int rows);
+
+    List<Goods> getRandomItem();
     Goods selectById(String id);
 
     long countAll(String category1, String category2);
-    int insert(Goods goods);
+
+    int plusViewCnt(Goods goods);
+
+    List<Goods> selectByViewCnt();
+
 }

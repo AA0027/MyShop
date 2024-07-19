@@ -25,16 +25,6 @@
     <title>Document</title>
 </head>
 <body>
-<!--    <i class="im fas fa-tshirt fa-5x"></i>-->
-<!--    <i class="im fas fa-tshirt fa-spin fa-5x"></i>-->
-<!--    <i class="im fas fa-tshirt fa-spin fa-5x"></i>-->
-<!--    <i class="im fas fa-tshirt fa-5x"></i>-->
-
-<!--    <i class="im2 fas fa-socks fa-spin fa-5x"></i>-->
-<!--    <i class="im2 fas fa-socks fa-spin fa-5x"></i>-->
-<!--    <i class="im2 fas fa-socks fa-5x"></i>-->
-<!--    <i class="im2 fas fa-socks fa-5x"></i>-->
-
     <i class="im fas fa-brands fa-redhat fa-spin"></i>
     <i class="im fas fa-brands fa-redhat fa-spin"></i>
     <i class="im fas fa-brands fa-redhat fa-spin fa-5x"></i>
@@ -44,39 +34,28 @@
     <i class="im2 fas fa-solid fa-mitten fa-spin"></i>
     <i class="im2 fas fa-solid fa-mitten fa-spin fa-5x"></i>
     <i class="im2 fas fa-solid fa-mitten fa-spin fa-5x"></i>
-    <div>
-        <img th:src="@{/image/logo.png}" id="logoimg">
-    </div>
+
+
+
     <div id="loginbox">
+        <img th:src="@{/image/logo.png}" id="logoimg">
         <div id="text01">로그인</div>
-        <p th:if="${param.error}" style="color: red;">아이디 혹은 비밀번호가 틀립니다.</p>
+        <p th:if="${param.error}" style="color: red;" th:text="${errorMessage}">아이디 혹은 비밀번호가 틀립니다.</p>
 <!--        <p th:if="${error}" style="color: red;" th:text="${errorMessage}">로그인에 실패하였습니다.</p>-->
         <form th:action="@{/user/login}" method="POST">
             <input id="inputid" class="form-control" name="username" type="text" placeholder="아이디 입력" required>
             <input id="inputpw" class="form-control" name="password" type="password" placeholder="비밀번호 입력" required>
-            <button class="btn btn-secondary btn-lg" type="submit">로그인</button>
-        </form>
-<!--        <div class = "container_box01">-->
-<!--            <button type="button" class="findbtn">아이디찾기</button>-->
-<!--            <span id="bar01">|</span>-->
-<!--            <button type="button" class="findbtn">비밀번호찾기</button>-->
-<!--        </div>-->
 
-        <div class= "container_box01">
-            <a class="authbtn" id="kakaobtn"
-               th:href="@{/oauth2/authorization/kakao}">
-                <img th:src="@{/image/kakao.png}" width="100" height="100">
-            </a>
-            <a class="authbtn" th:href="@{/oauth2/authorization/google}">
-                <img th:src="@{/image/google.png}" width="100" height="100">
-            </a>
-            <a class="authbtn" id="facebook" th:href="@{/oauth2/authorization/facebook}">
-                <img th:src="@{/image/facebook.png}" width="80" height="80">
-            </a>
-            <a class="authbtn" id="naver" th:href="@{/oauth2/authorization/naver}">
-                <img th:src="@{/image/naver.png}" width="90" height="90">
-            </a>
-        </div>
+            <div class= "container_box01">
+                <button class="btn btn-secondary btn-lg" type="submit">로그인</button>
+                <div class="social">
+                    <a class="authbtn" id="naver" th:href="@{/oauth2/authorization/naver}">
+                        <img th:src="@{/image/naver.png}" width="90" height="90">
+                    </a>
+                </div>
+            </div>
+        </form>
+
         <a th:href="@{/user/register}" class="btn btn-secondary btn-lg">
             회원가입하기
 <!--            <button class="btn btn-secondary btn-lg">회원가입하기</button>-->

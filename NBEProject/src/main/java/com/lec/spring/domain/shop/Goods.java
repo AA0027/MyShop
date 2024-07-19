@@ -15,24 +15,18 @@ public class Goods {
     private String category_code;
     private String name;
     private String keywords;
-    private String brand_name;
     private String maker;
     private String price;
-
-    private String image_1;
-    private String image_2;
-    private String image_3;
-    private String image_4;
-    private String image_5;
-    private String image_6;
+    private String image;
     private String contents;
+    private Integer viewCnt;
 
     public OrderGoods orderGoods(){
         return OrderGoods.builder()
                 .goodsNo(this.goods_no)
                 .name(this.name)
                 .price(this.price)
-                .image(this.image_1)
+                .image(this.image)
                 .build();
     }
 }

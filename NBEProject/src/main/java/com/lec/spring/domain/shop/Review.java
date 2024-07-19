@@ -26,5 +26,4 @@ public class Review {
     @ToString.Exclude
     private List<ReviewImage> images;
 
-    private Integer user_id;
 }

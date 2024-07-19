@@ -51,6 +51,7 @@ public class MyServiceImpl implements MyService {
             return;
         user = userRepository.selectById(user.getId());
         int cnt = reviewRepository.countUserReview(user.getId());
+        model.addAttribute("grade", user.getGrade());
         model.addAttribute("nickName", user.getName());
         model.addAttribute("currentPic", user.getProfileimage());
         model.addAttribute("reviewCount", cnt);

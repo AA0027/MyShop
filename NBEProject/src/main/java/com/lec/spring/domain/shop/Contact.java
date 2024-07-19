@@ -16,10 +16,10 @@ public class Contact {
     private Integer id;
     private Integer user_id;
     private Integer goods_no;
-
     private LocalDateTime regdate;
-    private String type;
     private String title;
+
+    private String type;
     private String content;
     private String status;
     private String answer;

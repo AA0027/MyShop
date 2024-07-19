@@ -69,7 +69,7 @@ public class ReviewController {
         Review review = Review.builder()
                 .goodsId(goodsId)
                 .title(title)
-                .user_id(user.getId())
+                .user(user)
                 .content(content)
                 .goodsId(goodsId)
                 .rate(rate)

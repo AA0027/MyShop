@@ -28,7 +28,6 @@ public class User {
     private String profileimage;
     private String grade;
     private Integer total_price;
-    private Integer point;
     private Address address;
 
     // 유저의 권한 리스트

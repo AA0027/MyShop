@@ -65,7 +65,7 @@
             g.goods_no as "goodsNo",
             g.name as "g_name",
             g.price as "g_price",
-            g.image_1 as "image",
+            g.image as "image",
             u.id as "userId",
             u.username as "u_username",
             u.name as "u_name",
@@ -95,29 +95,34 @@
     <select id="findById" flushCache="true" resultMap="mapPurchase">
         <include refid="select"/>
         and p.id=#{param1}
+        order by p.regdate desc
     </select>
 
     <select id="findByRequest" flushCache="true" resultMap="mapPurchase">
         <include refid="select"/>
         and p.merchant_id=#{param1}
+        order by p.regdate desc
     </select>
 
 
     <select id="findByUser" flushCache="true" resultMap="mapPurchase">
         <include refid="select"/>
         and p.user_id=#{param1}
+        order by p.regdate desc
     </select>
 
 
 
     <select id="listOrder" resultMap="mapPurchase">
         <include refid="select"/>
+        order by p.regdate desc
     </select>
 
 
     <select id="pagination" resultMap="mapPurchase">
         <include refid="select"/>
         limit #{param1}, #{param2}
+        order by p.regdate desc
     </select>
 
     <select id="cntOrder" resultType="long">
@@ -155,18 +160,21 @@
     <select id="findByUserUsernameAndStatusIn" parameterType="map" resultMap="mapPurchase">
         <include refid="select"/>
         AND p.status IN ('CANCEL_OK', 'OK')
+        order by p.regdate desc
         LIMIT #{offset}, #{limit}
     </select>
 
     <select id="findByStatusIn" parameterType="map" resultMap="mapPurchase">
         <include refid="select"/>
         AND p.status IN ('CANCEL_OK', 'OK', 'CANCEL')
+        order by p.regdate desc
         LIMIT #{offset}, #{limit}
     </select>
 
     <select id="uPagination" parameterType="map" resultMap="mapPurchase">
         <include refid="select"/>
         AND p.status = #{status}
+        order by p.regdate desc
         LIMIT #{offset}, #{limit}
     </select>
 
@@ -174,7 +182,7 @@
         <include refid="select"/>
         AND UPPER(u.username) LIKE CONCAT('%', UPPER(#{username}), '%')
         AND p.status IN ('OK', 'CANCEL_OK', 'CANCEL')
-        ORDER BY m_reg DESC
+        order by p.regdate desc
         LIMIT #{offset}, #{limit}
     </select>
 
@@ -192,11 +200,13 @@
                  JOIN address a ON a.user_id = u.id
         WHERE u.username = #{username}
           AND a.isDefault = true
+
     </select>
 
     <select id="username" parameterType="string" resultMap="mapPurchase">
             <include refid="select"/>
             AND UPPER(u.username) LIKE CONCAT('%', UPPER(#{username}), '%')
+            order by p.regdate desc
     </select>
 
 

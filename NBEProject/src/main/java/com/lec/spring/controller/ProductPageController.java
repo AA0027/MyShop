@@ -48,8 +48,23 @@ public class ProductPageController {
 
     @GetMapping("/home")
     public String home(Model model){
-//        int cartCnt = cartService.listUserItems(U.getLoggedUser().getId()).size();
-//        model.addAttribute("cartCnt", cartCnt);
+        List<Goods> rankGoods = null;
+        // 메인 페이지 추천 상품
+//        if(goodsService.getTopGoods().size() < 3){
+//            rankGoods = goodsService.getTopGoods();
+//        }
+//        else
+            rankGoods = goodsService.getTopGoods();
+        Goods rank1 = rankGoods.get(0);
+        Goods rank2 = rankGoods.get(1);
+        Goods rank3 = rankGoods.get(2);
+        Goods rank4 = rankGoods.get(3);
+        Goods rank5 = rankGoods.get(4);
+        model.addAttribute("rankGoods1", rank1);
+        model.addAttribute("rankGoods2", rank2);
+        model.addAttribute("rankGoods3", rank3);
+        model.addAttribute("rankGoods4", rank4);
+        model.addAttribute("rankGoods5", rank5);
         return "cho/prod/main";
     }
 
@@ -57,6 +72,7 @@ public class ProductPageController {
     @GetMapping("/prodList")
     public String list(String category1, String category2, Integer page, Model model){
         goodsService.getProds(category1, category2, page, model);
+
         return "cho/prod/list";
     }
     // 제품 상세 페이지
@@ -64,18 +80,9 @@ public class ProductPageController {
     public String detail(@PathVariable String good_no,Integer page, Model model){
 
         // 로그인한 사용자 정보
-        User user = U.getLoggedUser();
-
+        Goods goods = goodsService.getProd(good_no);
         goodsService.getReviews(good_no, page, model);
-        String url = U.getRequest().getRequestURI();
-        String currentUrl = "nbe/detail/" + good_no;
-
-
-
-        if(url.equals(currentUrl)){
-            recentService.delete(user.getId(), good_no);
-            recentService.addRecent(user.getId(), good_no);
-        }
+        goodsService.plusViewCnt(goods);
         return "cho/prod/detail";
     }
 
@@ -99,7 +106,7 @@ public class ProductPageController {
                 .goodsNo(goods.getGoods_no())
                 .name(goods.getName())
                 .price(goods.getPrice())
-                .image(goods.getImage_1())
+                .image(goods.getImage())
                 .build();
 
         Cart item = Cart.builder()

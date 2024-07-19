@@ -48,7 +48,7 @@
 
     <div class="cart-item" th:each="e : ${items}">
         <a th:href="@{'/nbe/detail/'+${e.goods_no}}">
-            <img th:src="${e.getImage_1()}" alt="item image">
+            <img th:src="${e.getImage()}" alt="item image">
         </a>
         <div class="cart-item-details">
             <div th:text="${e.name}">상품명</div>

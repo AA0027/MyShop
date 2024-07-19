@@ -30,7 +30,7 @@
         <div class="product-item" th:each="e : ${recentGoods}">
             <div class="product-image">
                 <a th:href="@{'/nbe/detail/'+${e.goods_no}}">
-                    <img th:src="${e.getImage_1()}">
+                    <img th:src="${e.getImage()}">
                 </a>
             </div>
             <div class="product-details">

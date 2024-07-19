@@ -10,11 +10,13 @@ import com.lec.spring.repository.*;
 import com.lec.spring.util.U;
 import jakarta.servlet.http.HttpSession;
 import org.apache.ibatis.session.SqlSession;
+import org.openqa.selenium.support.ui.ISelect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 @Service
 public class GoodsServiceImpl implements GoodsService {
@@ -99,7 +101,7 @@ public class GoodsServiceImpl implements GoodsService {
         User user = U.getLoggedUser();
         Address addr = userRepo.getDefaultAddr(user.getId());
 
-
+        // 메인 페이지 추천 상품 end
         if(page == null || page < 1) page=1;
 
         session.setAttribute("review_page", page);
@@ -127,7 +129,9 @@ public class GoodsServiceImpl implements GoodsService {
             for (int i = 0; i < reviews.size(); i++) {
                 totalRate += reviews.get(i).getRate();
             }
-            totalRate /= reviews.size();
+            if(totalRate != 0){
+                totalRate /= reviews.size();
+            }
             model.addAttribute("reviews", reviews);
             model.addAttribute("page", page);
             model.addAttribute("startPage", startPage);
@@ -142,7 +146,23 @@ public class GoodsServiceImpl implements GoodsService {
         }
     }
 
+    @Override
+    public List<Goods> getRandomItem() {
+        return goodsRepo.getRandomItem();
+    }
 
 
+    // 전체 사용자가 해당 물품 조회
+    @Override
+    public void plusViewCnt(Goods goods) {
+        if(goods.getViewCnt() == null)
+            goods.setViewCnt(0);
+        goods.setViewCnt(goods.getViewCnt() + 1);
+        goodsRepo.plusViewCnt(goods);
+    }
 
+    @Override
+    public List<Goods> getTopGoods() {
+        return goodsRepo.selectByViewCnt();
+    }
 }

@@ -28,7 +28,7 @@
     <div class="content">
         <div class="product-detail">
             <div class="image-gallery">
-                <img th:src="${goods.image_1}" alt="Product Image">
+                <img th:src="${goods.image}" alt="Product Image">
             </div>
             <div class="product-info">
                 <h2 th:text="${goods.name}">샘플상품 2</h2>
@@ -39,7 +39,7 @@
                             <input type="hidden" name="goodsNo" th:value="${goods.goods_no}">
                             <input type="hidden" name="g_name" th:value="${goods.name}">
                             <input type="hidden" name="price" th:value="${goods.price}">
-                            <input type="hidden" name="image" th:value="${goods.image_1}">
+                            <input type="hidden" name="image" th:value="${goods.image}">
                             <input type="hidden" name="u_id" th:value="${user.userId}">
                             <input type="hidden" name="username" th:value="${user.username}">
                             <input type="hidden" name="name" th:value="${user.name}">

@@ -15,9 +15,10 @@ $(function(){
         location.href = '/mypage/detail';
     });
 
-    $('.accButton').click(function (){
+    $('.login-btn').click(function(){
+       location.href = '/user/login'
+    })
 
-    });
 });
 
 function category(){

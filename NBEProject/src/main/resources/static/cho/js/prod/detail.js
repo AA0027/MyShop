@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    if($.cookie('review') !== undefined){
+        $('.rev').toggleClass('hidden');
+    }
+
     // 별점 표시
     $('.review').each(function() {
         let rating = parseInt($(this).find('.rating-score').text()); // 평점 가져오기
@@ -58,10 +62,19 @@ $(document).ready(function() {
     // 리뷰 접기 펼치기 기능
     $('.review-btn').click(function(){
         $('.rev').toggleClass('hidden');
+        if($('.rev').hasClass('hidden')){
+            $.cookie('review','none');
+        }
+        else{
+            $.cookie('review','block');
+        }
     })
     // 리뷰 접기 펼치기 기능 end
 
 });
+
+
+
 // 장바구니 담기
 function addCart(){
 

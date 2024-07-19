@@ -40,7 +40,7 @@
             g.goods_no as "goodsNo",
             g.name as "g_name",
             g.price as "g_price",
-            g.image_1 as "image",
+            g.image as "image",
             u.id as "u_id",
             u.username as "u_username",
             u.name as "u_name",

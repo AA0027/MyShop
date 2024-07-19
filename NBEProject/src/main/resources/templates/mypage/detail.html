@@ -29,13 +29,13 @@
                 <img class="rounded" style="width: 200px; height: 200px; float: left" th:if="${currentPic}" th:src="@{'/upload/' + ${currentPic}}" th:alt="'none'"/>
                 <i class="fas fa-user-circle fa-10x" style="color: lightgray; float: left;" th:unless="${currentPic}"></i>
                 <div class="child">
-                    <i class="fas fa-star fa-3x child " th:id="'grade'"></i>
+                    <i class="fas fa-star fa-3x child grade"></i>
                 </div>
             </span>
             <span class="col-12 col-sm-12 parent" th:unless="${logged_user}">
                 <i class="fas fa-user-circle fa-10x" style="color: lightgray; float: left;"></i>
                    <div class="child">
-                    <i class="fas fa-star fa-3x child " th:id="'grade'"></i>
+                    <i class="fas fa-star fa-3x child grade"></i>
                 </div>
             </span>
             <span class="col-12 col-sm-12 mt-5">
@@ -97,31 +97,39 @@
         function Back(){
             location.href = "/nbe/home";
         }
-        let $grade = $("[id*='grade']");
+        let grade = [[${grade}]];
+        let $grade = $(".grade");
+        console.log(grade);
         $(window).on('load',function (){
            let user = [[${logged_user}]];
-           $grade.removeClass("bronze");
-           $grade.removeClass("sliver");
-           $grade.removeClass("gold");
-           $grade.removeClass("diamond");
-           if(user === null)
-               return;
+           $grade.css({
+               "color": "black",
+           });
+
            console.log(user.grade);
-           if(user.grade === "Bronze" || user.grade ==="bronze")
+           if(grade === "Bronze")
            {
-               $grade.addClass('bronze');
+               $grade.css({
+                   "color": "saddlebrown",
+               });
            }
-           else if(user.grade === "Sliver" || user.grade ==="sliver")
+           else if(grade === "Sliver")
            {
-               $grade.addClass('sliver');
+               $grade.css({
+                   "color": "silver",
+               });
            }
-           else if(user.grade ==="Gold"|| user.grade ==="gold")
+           else if(grade ==="Gold")
            {
-               $grade.addClass('gold');
+               $grade.css({
+                   "color": "gold",
+               });
            }
-           else if(user.grade ==="Diamond" || user.grade ==="diamond")
+           else if(grade ==="Diamond")
            {
-               $grade.addClass('diamond');
+               $grade.css({
+                   "color": "lightskyblue",
+               });
            }
             $grade.animate({ 'opacity': 1 }, 1000);
         });

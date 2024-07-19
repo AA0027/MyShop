@@ -31,15 +31,12 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/post/**", "/mypage/**").authenticated()
-//                        .requestMatchers("/post/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/admin/**").hasAnyRole( "ADMIN")
-//                        .requestMatchers("/**").hasAnyRole("!USER_BAN")
                         .anyRequest().permitAll()
                 ) //end auth -> auth.~
                 .formLogin(form -> form
                         .loginPage("/user/login")
                         .loginProcessingUrl("/user/login")  //loadUserBy.. 필요
-                        //.defaultSuccessUrl("/user/test")
                         .successHandler(new CustomLoginSuccessHandler("/nbe/home"))
                         .failureHandler(new CustomLoginFailureHandler())
                 )

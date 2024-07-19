@@ -15,8 +15,7 @@
         <result property="gender" column="u_gender"/>
         <result property="profileimage" column="u_profile"/>
         <result property="grade" column="u_grade"/>
-        <result property="total_price" column="totalPrice"/>
-        <result property="point" column="u_point"/>
+        <result property="total_price" column="total_price"/>
     </resultMap>
     <resultMap id="mapImage" type="com.lec.spring.domain.shop.ReviewImage">
         <result property="id" column="i_id"/>
@@ -52,8 +51,7 @@
             u.gender "u_gender",
             u.profileimage "u_profile",
             u.grade "u_grade",
-            u.total_price "totalPrice",
-            u.point "u_point",
+            u.total_price "total_price",
             i.id "i_id",
             i.review_id "i_rid",
             i.file_name "i_fname"
@@ -79,12 +77,12 @@
     <insert id="save" parameterType="com.lec.spring.domain.shop.Review"
             useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         INSERT INTO review (user_id, goods_no, title, content, rate)
-        VALUES (#{user_id}, #{goodsId}, #{title}, #{content}, #{rate})
+        VALUES (#{user.id}, #{goodsId}, #{title}, #{content}, #{rate})
     </insert>
 
     <select id="findById" resultType="com.lec.spring.domain.ReviewGoods"
             resultMap="mapPurchase">
-        SELECT p.id, p.user_id, p.amount, p.opt, a.status, g.price, g.image_1, g.name, p.goods_id
+        SELECT p.id, p.user_id, p.amount, p.opt, a.status, g.price, g.image, g.name, p.goods_id
         FROM purchase p JOIN pay a ON p.pay_id = a.id
                         JOIN goods g ON p.goods_id = g.goods_no
         WHERE p.id = #{id}
@@ -96,7 +94,7 @@
         <result column="amount" property="amount"/>
         <result column="opt" property="opt"/>
         <result column="price" property="price"/>
-        <result column="image_1" property="image"/>
+        <result column="image" property="image"/>
         <result column="name" property="goodsName"/>
         <result column="goods_id" property="goodsId"/>
     </resultMap>

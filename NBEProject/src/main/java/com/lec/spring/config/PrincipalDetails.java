@@ -3,6 +3,7 @@ package com.lec.spring.config;
 import com.lec.spring.domain.shop.Authority;
 import com.lec.spring.domain.User;
 import com.lec.spring.service.UserService;
+import lombok.Builder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -15,6 +16,7 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
     private UserService userService;
 
     private Map<String, Object> attributes;
+    private boolean status = true;
 
     public void setUserService(UserService userService){
         this.userService = userService;
@@ -34,7 +36,12 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
         this.attributes = attributes;
     }
 
-    @Override
+    public boolean changeMode(boolean status){
+        this.status = status;
+        return status;
+    }
+
+
     public Map<String, Object> getAttributes() {
         return attributes;
     }
@@ -83,7 +90,7 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return user.isStatus();
     }
 
     @Override

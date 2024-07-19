@@ -153,15 +153,6 @@ public class UserController {
         }
     }
 
-//    @PostMapping("/register")
-//    public String registerOk(@Valid @ModelAttribute UserDto userDto, Model model){
-//        int cnt = userService.register(userDto);
-//
-//        String page = "/user/registerOk";
-//
-//        model.addAttribute("result", cnt);
-//        return page;
-//    }
 
     @PostMapping("/loginError")
     public String loginError(){
