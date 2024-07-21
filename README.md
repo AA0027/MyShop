@@ -135,15 +135,15 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 `RestTemplate` | 제품 구매바로가기와 장바구니 기능에대해 서버에 응답을 요청하여 구매바로가기, 장바구니 담을떄도 있는지 없는지에대한 응답값에 따른 처리를 하기위하여 사
 `Cookie` | 제품 상세페이지에서 해당 제품에대해 평소에 display가 none 인 리뷰들을 페이지네이션하였을떄 페이지 이동시 dispaly의 값이 none으로 변경되어 cookie에 리뷰에 담겨있는 div의 속석을 저장하여 페이지이동시에도 리뷰목록 display 속성 유지하고자 함
 `SecurityContextHolder` | 서비스 동작시 로그인한 사용자의 정보를 얻고자 사용. SecurityContextHolder에서 Context를 얻은후 Authentication에서 Principle 정보를 얻을수 있다.
-`Enum` | 문구 쇼핑몰 특성에 맞춰 _잉크컬러, 바디컬러, 심두께, 태그, 할인율, 상품카테고리, 기본배송메시지, 카드사별 할부혜택내용, 문의게시판 말머리, 실시간 알림 종류_ 등을 **연관된 상수들의 집합인 열거형** `Enum`으로 정의. 각 필드마다 데이터를 배정하고 이를 접근자(getter method) 통해 호출하면서 리팩토링 시 변경 범위를 최소화하였음.
-`Commons Lang3` | 상품 전체 검색 시 _StringUtils, NumberUtils_ 등 `Apache Commons Lang3` 클래스에 정의된 메소드 통해 **parameter type을 동적으로 구분 및 처리**하도록 조건별 쿼리문을 최적화하였음.
-`Thymeleaf Layout` | _Alert, Modal, ***Pagination***, ***Comment***, Header/Footer,  Dashboard_ 등을 각각 `Fragment`로 구분하여 사이트 전역적으로 사용되는 데 있어 코드 중복을 피하고 추가/수정에 용이하도록 의도하였음.
+`ajax` | 문구 쇼핑몰 특성에 맞춰 _잉크컬러, 바디컬러, 심두께, 태그, 할인율, 상품카테고리, 기본배송메시지, 카드사별 할부혜택내용, 문의게시판 말머리, 실시간 알림 종류_ 등을 **연관된 상수들의 집합인 열거형** `Enum`으로 정의. 각 필드마다 데이터를 배정하고 이를 접근자(getter method) 통해 호출하면서 리팩토링 시 변경 범위를 최소화하였음.
+`RestTemplate` | 상품 전체 검색 시 _StringUtils, NumberUtils_ 등 `Apache Commons Lang3` 클래스에 정의된 메소드 통해 **parameter type을 동적으로 구분 및 처리**하도록 조건별 쿼리문을 최적화하였음.
+
 
 ### 📖ERD
 ![erd](https://github.com/user-attachments/assets/08fe6d79-9dac-4707-beb5-0231c65c132e)
 
 
-### ![image](https://github.com/user-attachments/assets/456be337-a369-40cf-a285-26b49eabb9ef) 배포
+###  배포
 
 
 
