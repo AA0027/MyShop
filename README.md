@@ -14,6 +14,7 @@
 ### 진행 기간
 * 22.2.25 - 22.3.4
 <hr/>
+
 ### 🧙 맴버구성
  - 팀장  : 이윤재 - Payment / Order / Cartegory
  - 팀원1 : 채현우 - Login / Join / Update / 각 페이지 세션 작업
