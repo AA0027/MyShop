@@ -37,13 +37,11 @@
 📈 관리자페이지 : 가입한 회원 정보확인 | 회원 활성화/비활성화 가능 | 회원 등급 변경가능 | 구매자 주문내역 확인 | 구매자 취소요청 환불처리 | 회원 상품문의 확인 및 답변|
 ```
 
- #1. [![소셜 로그인](https://youtu.be/vDreVqhy6dY)
- #2. [![카테고리별 제품 조회, main 페이지 제품 추천]](https://youtu.be/ZsKDU0IyimI)
- #3. [![제품 장바구니 및 바로구매](https://youtu.be/KlHED1Shz_o)
- #4. 결제한 상품에대한 리뷰작성 및 결제 취소요청
- [![YouTube](스크린샷 이미지)](https://youtu.be/o4BEff3XJDE)
- #5. 계시글 작성
- [![YouTube](스크린샷 이미지)](https://youtu.be/c3nrzZ5vNZc)
+ #1. [[소셜 로그인]](https://youtu.be/vDreVqhy6dY)
+ #2. [[카테고리별 제품 조회, main 페이지 제품 추천]](https://youtu.be/ZsKDU0IyimI)
+ #3. [[제품 장바구니 및 바로구매]](https://youtu.be/KlHED1Shz_o)
+ #4. [[결제한 상품에대한 리뷰작성 및 결제 취소요청]](https://youtu.be/o4BEff3XJDE)
+ #5. [[계시글 작성]](https://youtu.be/c3nrzZ5vNZc)
 
 ### 🛠기술 스택
 OS | Windows 10
