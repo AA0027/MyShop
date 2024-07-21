@@ -8,6 +8,16 @@
 - [x] [✨기술적 의사결정](#기술적-의사결정)
 - [x] [📖ERD](#erd)
 
+<hr>
+#### 진행 기간
+* 22.2.25 - 22.3.4
+<hr>
+### 🧙 맴버구성
+ - 팀장  : 이윤재 - Payment / Order / Cartegory
+ - 팀원1 : 채현우 - Login / Join / Update / 각 페이지 세션 작업
+ - 팀원2 : 전성덕 - Main Page
+ - 팀원3 : 김창훈 - Notice Page
+ - 팀원4 : 김성재 - Detail Page
 <hr/>
 ### 🎯서비스 핵심기능
 ```
