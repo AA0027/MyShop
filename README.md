@@ -37,12 +37,9 @@
 📈 관리자페이지 : 가입한 회원 정보확인 | 회원 활성화/비활성화 가능 | 회원 등급 변경가능 | 구매자 주문내역 확인 | 구매자 취소요청 환불처리 | 회원 상품문의 확인 및 답변|
 ```
 
- #1. 소셜 로그인
- [![YouTube](https://youtu.be/vDreVqhy6dY)
- #2. 카테고리별 제품 조회, main 페이지 제품 추천
- [![YouTube](스크린샷 이미지)](https://youtu.be/ZsKDU0IyimI)
- #3. 제품 장바구니 및 바로구매
- [![YouTube](스크린샷 이미지)](https://youtu.be/KlHED1Shz_o)
+ #1. [![소셜 로그인](https://youtu.be/vDreVqhy6dY)
+ #2. [![카테고리별 제품 조회, main 페이지 제품 추천]](https://youtu.be/ZsKDU0IyimI)
+ #3. [![제품 장바구니 및 바로구매](https://youtu.be/KlHED1Shz_o)
  #4. 결제한 상품에대한 리뷰작성 및 결제 취소요청
  [![YouTube](스크린샷 이미지)](https://youtu.be/o4BEff3XJDE)
  #5. 계시글 작성
@@ -70,13 +67,13 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 `SecurityContextHolder` | 서비스 동작시 로그인한 사용자의 정보를 얻고자 사용. SecurityContextHolder에서 Context를 얻은후 Authentication에서 Principle 정보를 얻을수 있다.
 `ajax` | 문구 쇼핑몰 특성에 맞춰 _잉크컬러, 바디컬러, 심두께, 태그, 할인율, 상품카테고리, 기본배송메시지, 카드사별 할부혜택내용, 문의게시판 말머리, 실시간 알림 종류_ 등을 **연관된 상수들의 집합인 열거형** `Enum`으로 정의. 각 필드마다 데이터를 배정하고 이를 접근자(getter method) 통해 호출하면서 리팩토링 시 변경 범위를 최소화하였음.
 `RestTemplate` | 상품 전체 검색 시 _StringUtils, NumberUtils_ 등 `Apache Commons Lang3` 클래스에 정의된 메소드 통해 **parameter type을 동적으로 구분 및 처리**하도록 조건별 쿼리문을 최적화하였음.
+`AWS EC2` | 상품 전체 검색 시 _StringUtils, NumberUtils_ 등 `Apache Commons Lang3` 클래스에 정의된 메소드 통해 **parameter type을 동적으로 구분 및 처리**하도록 조건별 쿼리문을 최적화하였음.
+`AWS RDS` | 상품 전체 검색 시 _StringUtils, NumberUtils_ 등 `Apache Commons Lang3` 클래스에 정의된 메소드 통해 **parameter type을 동적으로 구분 및 처리**하도록 조건별 쿼리문을 최적화하였음.
 
 
 ### 📖ERD
 ![erd](https://github.com/user-attachments/assets/08fe6d79-9dac-4707-beb5-0231c65c132e)
 
-
-###  배포
 
 
 
