@@ -67,8 +67,7 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 `SecurityContextHolder` | 서비스 동작시 로그인한 사용자의 정보를 얻고자 사용. SecurityContextHolder에서 Context를 얻은후 Authentication에서 Principle 정보를 얻을수 있다.
 `ajax` | 사용 결제 요청시 사용자 정보 및 상품정보를 서버에 전달하기 위하여 ajax 를 사용함.
 `RestTemplate` | API를 사용하여 의류상품들의 정보를 얻거나 결제, 취소요청 등을 하기위하여 사용함.
-`AWS EC2` | 프로젝트 배포실습을위하여 무료로 사용할수 있는 EC2 서버에 자동화 배포 스크립트 작성하여 팀원들이 언제든지
-기능 테스트를 사용하기위하여 사용함.
+`AWS EC2` | 프로젝트 배포실습을위하여 무료로 사용할수 있는 EC2 서버에 자동화 배포 스크립트 작성하여 팀원들이 언제든지 기능 테스트를 사용하기위하여 사용함.
 `AWS RDS` | EC2 서버에 연결할 DB 저버를 사용하기위하여 AWS 에서 제공하는 RDS 사용
 
 
