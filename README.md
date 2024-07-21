@@ -7,12 +7,13 @@
 - [x] [🛠기술 스택](#기술-스택)
 - [x] [✨기술적 의사결정](#기술적-의사결정)
 - [x] [📖ERD](#erd)
+- [x] .[🧙 맴버구성](#멤버구성)
 
 <hr/>
 
 
 ### 진행 기간
-* 22.2.25 - 22.3.4
+* 24.6.13 - 24.7.2
 <hr/>
 
 ### 🧙 맴버구성
@@ -139,6 +140,10 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 
 ### 📖ERD
 ![erd](https://github.com/user-attachments/assets/08fe6d79-9dac-4707-beb5-0231c65c132e)
+
+
+### ![image](https://github.com/user-attachments/assets/456be337-a369-40cf-a285-26b49eabb9ef) 배포
+
 
 
 
