@@ -27,6 +27,9 @@
 ### 💹페이지 순서도
 ![페이지순서도](https://github.com/user-attachments/assets/05dfeb39-5935-45fa-b3e0-e9313f329316)   
 <br/><br/><br/>
+
+
+[![Slide 1](https://github.com/AA0027/MyShop/issues/2#issue-2422963759)](#) [![Slide 2](https://github.com/AA0027/MyShop/issues/4#issue-2422966326)](#) [![Slide 3](https://github.com/AA0027/MyShop/issues/5#issue-2422967221)](#)
 ### 🎯서비스 핵심기능
 ```
 👨‍👨‍👧 회원 : 로그인 | 회원가입 | 소셜 로그인(네이버) 
