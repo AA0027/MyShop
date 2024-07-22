@@ -1,36 +1,29 @@
 # 🛒NBE 쇼핑몰 (4인 팀 프로젝트) 
-이메일 : <whckdtjd456@naver.com>
+<br/>
 
 ### 💻프로젝트 개요
 💬스프링 부트를 사용하여 고객들이 옷을 구매하고 자신의 코디를 올릴수 있는 쇼핑몰을 기획하여 개발하게됬습니다..
-- [x] [🧙맴버 구성](#멤버-구성)
+- [x] [🍾 역할](#역할)
+- [x] [💹페이지 순서도](#페이지-순서도)
 - [x] [🎯서비스 핵심기능](#서비스-핵심기능)
 - [x] [🛠기술 스택](#기술-스택)
 - [x] [✨기술적 의사결정](#기술적-의사결정)
 - [x] [📖ERD](#erd)
 
 
-
+<br/><br/><br/>
 <hr/>
 
 
-### 진행 기간
-* 24.6.13 - 24.7.2
-<hr/>
-
-### 🍾 
- - 팀장  : 진민장 - 계시글 기능, 마이페이지, 배송지 관리기능
- - 팀원1 : 조창성 - erd 설계, 장바구니, 구매, 결제 및 결제취소 기능 구현, 제품 관련 기능 구현
- - 팀원2 : 한승욱 - 관리자 페이지 기능 구현
- - 팀원3 : 이가영 - 리뷰작성기능 구현 및 css 작업
- - 팀원4 : 신성태 - 회원가입 및 로그인(네이버 Oauth) 구현
+###🍾 역할 
+<summary>핵심기능 #2. 전체 상품 검색</summary>
    
- 
+ <br/><br/><br/>
 <hr/>
 
 ### 💹페이지 순서도
-![페이지순서도](https://github.com/user-attachments/assets/05dfeb39-5935-45fa-b3e0-e9313f329316)
-
+![페이지순서도](https://github.com/user-attachments/assets/05dfeb39-5935-45fa-b3e0-e9313f329316)   
+<br/><br/><br/>
 ### 🎯서비스 핵심기능
 ```
 👨‍👨‍👧 회원 : 로그인 | 회원가입 | 소셜 로그인(네이버) 
@@ -49,7 +42,7 @@
  #6. [!관리자 페이지](https://youtu.be/fKTIbY95Gr8){:target="_blank"}  
 
 
-
+<br/><br/>
 ### 🛠기술 스택
 OS | Windows 10
 --- | --- |
@@ -63,7 +56,7 @@ Library | ![Spring Security](https://img.shields.io/badge/spring%20security-6DB3
 API | ![Iamport Payment](https://img.shields.io/badge/Iamport%20Payment-c1272d?style=for-the-badge) ![Font Awesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white) ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 Server |![Apache Tomcat 9.0](https://img.shields.io/badge/Apache%20Tomcat%20-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=black) ![amazonec2](https://img.shields.io/badge/amazonec2-c1272d?style=for-the-badge&logo=amazonec2&logoColor=white) ![amazonrds](https://img.shields.io/badge/amazonRDS-c1272d?style=for-the-badge&logo=amazonrds&logoColor=white) 
 Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)
-
+<br/><br/>
 ### ✨기술적 의사결정
 선택기술 | 선택이유 및 근거
 --- | --- |
@@ -74,7 +67,7 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 `RestTemplate` | API를 사용하여 의류상품들의 정보를 얻거나 결제, 취소요청 등을 하기위하여 사용함.
 `AWS EC2` | 프로젝트 배포실습을위하여 무료로 사용할수 있는 EC2 서버에 자동화 배포 스크립트 작성하여 팀원들이 언제든지 기능 테스트를 사용하기위하여 사용함.
 `AWS RDS` | EC2 서버에 연결할 DB 저버를 사용하기위하여 AWS 에서 제공하는 RDS 사용함
-
+<br/><br/>
 
 ### 📖ERD
 ![erd](https://github.com/user-attachments/assets/08fe6d79-9dac-4707-beb5-0231c65c132e)
