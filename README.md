@@ -39,12 +39,12 @@
 ```
 클릭시 유튜브 기술시연 영상   
    
- #1. [로그인 및 회원가입](https://youtu.be/vDreVqhy6dY/){:target="_blank"}      
- #2. [카테고리별 제품 조회, main 페이지 제품 추천](https://youtu.be/ZsKDU0IyimI)   
- #3. [제품 장바구니 및 바로구매](https://youtu.be/KlHED1Shz_o)   
- #4. [결제한 상품에대한 리뷰작성 및 결제 취소요청](https://youtu.be/o4BEff3XJDE)   
- #5. [계시글 작성](https://youtu.be/c3nrzZ5vNZc)   
- #6. [관리자 페이지](https://youtu.be/fKTIbY95Gr8)   
+ #1. [로그인 및 회원가입](https://youtu.be/vDreVqhy6dY){:target="_blank"}         
+ #2. [카테고리별 제품 조회, main 페이지 제품 추천](https://youtu.be/ZsKDU0IyimI){:target="_blank"}      
+ #3. [제품 장바구니 및 바로구매](https://youtu.be/KlHED1Shz_o){:target="_blank"}      
+ #4. [결제한 상품에대한 리뷰작성 및 결제 취소요청](https://youtu.be/o4BEff3XJDE){:target="_blank"}      
+ #5. [계시글 작성](https://youtu.be/c3nrzZ5vNZc){:target="_blank"}      
+ #6. [관리자 페이지](https://youtu.be/fKTIbY95Gr8){:target="_blank"}      
 
 ### 🛠기술 스택
 OS | Windows 10
