@@ -13,11 +13,18 @@
 
 <br/><br/><br/>
 <hr/>
+  - EC2 RDS를 활용한 배포
+  - 상품 구매 및 취소 구현 카드 결제
+  - API를 AJAX로 활용한 결제 구현
 
 
 ### 🍾역할 
-<summary>핵심기능 #2. 전체 상품 검색</summary>
-   
+  <summary>erd 설계</summary>   
+  <summary>RestTemplate으로 외부의 API를 사용하여 데이터 수집</summary>   
+  <summary>상품 상세 페이지 및 카테고리 구현</summary>   
+  <summary>AJAX를 사용한 결제 및 취소 요청 구현</summary>   
+  <summary>AWS서버에 배포를위한 자동화 스크립트 작성</summary>     
+  <summary>기능 통합시 발생한 에러 해결</summary>     
  <br/><br/><br/>
 <hr/>
 
