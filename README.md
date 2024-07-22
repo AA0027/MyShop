@@ -43,66 +43,16 @@
  #2. [카테고리별 제품 조회, main 페이지 제품 추천](https://youtu.be/ZsKDU0IyimI){:target="_blank"}      
  #3. [제품 장바구니 및 바로구매](https://youtu.be/KlHED1Shz_o){:target="_blank"}      
  #4. [결제한 상품에대한 리뷰작성 및 결제 취소요청](https://youtu.be/o4BEff3XJDE){:target="_blank"}      
- #5. [계시글 작성](https://youtu.be/c3nrzZ5vNZc){:target="_blank"}      
+ #5. [게시글 작성](https://youtu.be/c3nrzZ5vNZc){:target="_blank"}      
  #6. [관리자 페이지](https://youtu.be/fKTIbY95Gr8){:target="_blank"}  
 
 
- <details>
-<summary>핵심기능 #1. 실시간 알림</summary>
+ |<small>로그인 및 회원가입</small>|<small>카테고리별 제품 조회, main 페이지 제품 추천<small>|<small>제품 장바구니 및 바로구매</small>|
+|:-:|:-:|:-:|
+|![003](https://youtu.be/vDreVqhy6dY)|![004](https://github.com/rhjdev/geulbeotmall/assets/95993932/99faf0a1-0197-4a29-8110-2d89314555a7)|![005](https://github.com/rhjdev/geulbeotmall/assets/95993932/42f13241-98d0-4345-895c-ce2dfc75a968)|
+|<small><b>결제한 상품에대한 리뷰작성 및 결제 취소요청</b></small>|<small><b>게시글 작성</b></small>|<small><b>관리자 페이지</b></small>|
+|![006](https://github.com/rhjdev/geulbeotmall/assets/95993932/d3d89f06-1a07-41e2-8d69-83ab172fdff0)|![007](https://github.com/rhjdev/geulbeotmall/assets/95993932/ed538d0d-1f0c-4bf5-8dfd-1543db876983)|![008](https://github.com/rhjdev/geulbeotmall/assets/95993932/82878195-95fc-43a2-ba78-9905f07f1240)|
 
-![fuction001](https://youtu.be/vDreVqhy6dY)
-</details>
-<details>
-<summary>핵심기능 #2. 전체 상품 검색</summary>
-
-![fuction002](https://youtu.be/ZsKDU0IyimI){:target="_blank")
-</details>
-
-<details>
-<summary>핵심기능 #3. 잉크색상별 검색 필터</summary>
-
-![fuction003](https://github.com/rhjdev/geulbeotmall/assets/95993932/b1555bac-bccc-4754-a74c-e4ab97a3a53d)
-- [x] 색상들을 `Enum` 상수 필드로 정의하고, 각각 `DB 저장에 쓰일 값(value)/사용자 화면에 보일 이름(label)/스타일 적용 용도의 헥스코드(color)`와 같은 데이터를 명시한 후 생성자 통해 호출 및 활용하였습니다.
-```java
-public enum ProductInkColor {
-    BLACK("black", "블랙", "color: #000000;"); //value, label, color
-}
-```
-```html
-<th:block th:each="ink : ${T(com.reminder.geulbeotmall.product.model.dto.ProductInkColor).values()}">
-    <span class="color-span" th:data-target="${ ink.getLabel() }">
-        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" th:title="${ ink.getLabel() }">
-            <i class="fa-solid fa-square-full" th:style="${ ink.getColor() }"></i>
-        </a>
-    </span>
-</th:block>
-```
-</details>
-<details>
-<summary>핵심기능 #4. 최근 본 상품 목록/비로그인 장바구니</summary>
-
-![fuction004](https://github.com/rhjdev/geulbeotmall/assets/95993932/aed5de29-cbac-4619-b66c-648153d60b8b)
-- [x] 로그인 여부에 상관 없이 접속 이래 현재까지 조회한 상품 목록을 `@SessionAttributes` 어노테이션 통해 세션상에 `recentlyViewed` 이름으로 계속 기록합니다. 이후 로그인하게 되면 회원은 `마이페이지 메인에서 해당 목록을 확인`할 수 있습니다.
-- [x] 비로그인 상태에서 담은 장바구니 상품은 마찬가지로 `@SessionAttributes` 어노테이션 통해 세션상에 `geulbeotCart`로서 기록됩니다. 이어서 로그인이 발생할 경우 `회원의 장바구니 목록으로 연동 및 저장`됩니다.
-</details>
-<details>
-<summary>핵심기능 #5. 이메일 발송</summary>
-
-![fuction005](https://github.com/rhjdev/geulbeotmall/assets/95993932/5ec2b61a-36b8-458e-9ee8-0cd250dc7bb4)
-- [x] `JavaMailSender`를 이용해 이메일 인증 및 임시 비밀번호 발송 기능을 구현하였습니다.
-- [x] 휘발성 데이터인 이메일 인증 토큰의 경우 인메모리(In-Memory) 형태에 TTL(Time to Live) 특성을 지녀 유효기간이 설정된 `Redis` 기반의 Refresh Token으로 관리합니다. 사용자는 전송된 링크를 눌러 재접속하는 것만으로 이메일 인증을 완료할 수 있습니다.
-</details>
-<details>
-<summary>핵심기능 #6. 소셜 로그인</summary>
-
-- [x] 일반 로그인의 경우 회원가입 양식 작성 후 이메일 인증을 거쳐야 하는 반면, 소셜 로그인한 회원은 `해당 계정에서 불러온 이름 및 이메일 정보가 연동`돼 입력란을 채우며 나아가 별도의 이메일 인증 없이 곧바로 이용이 가능합니다.
-</details>
-<details>
-<summary>핵심기능 #7. 적립금 혜택</summary>
-</details>
-<details>
-<summary>핵심기능 #8. 휴지통 이동</summary>
-</details>
 
 ### 🛠기술 스택
 OS | Windows 10
