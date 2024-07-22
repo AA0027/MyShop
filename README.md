@@ -39,19 +39,13 @@
 ```
 클릭시 유튜브 기술시연 영상   
    
- #1. [!로그인 및 회원가입(https://github.com/AA0027/Shop/issues/4#issue-2422798344)](https://youtu.be/vDreVqhy6dY){:target="_blank"}        
+ #1. ![로그인 및 회원가입(https://github.com/AA0027/Shop/issues/4#issue-2422798344)](https://youtu.be/vDreVqhy6dY){:target="_blank"}        
  #2. [!카테고리별 제품 조회, main 페이지 제품 추천](https://youtu.be/ZsKDU0IyimI){:target="_blank"}      
  #3. [!제품 장바구니 및 바로구매](https://youtu.be/KlHED1Shz_o){:target="_blank"}      
  #4. [!결제한 상품에대한 리뷰작성 및 결제 취소요청](https://youtu.be/o4BEff3XJDE){:target="_blank"}         
  #5. [!게시글 작성](https://youtu.be/c3nrzZ5vNZc){:target="_blank"}      
  #6. [!관리자 페이지](https://youtu.be/fKTIbY95Gr8){:target="_blank"}  
 
-
- |<small>로그인 및 회원가입</small>|<small>카테고리별 제품 조회, main 페이지 제품 추천<small>|<small>제품 장바구니 및 바로구매</small>|
-|:-:|:-:|:-:|
-|![003](https://youtu.be/vDreVqhy6dY)|![004](https://github.com/rhjdev/geulbeotmall/assets/95993932/99faf0a1-0197-4a29-8110-2d89314555a7)|![005](https://github.com/rhjdev/geulbeotmall/assets/95993932/42f13241-98d0-4345-895c-ce2dfc75a968)|
-|<small><b>결제한 상품에대한 리뷰작성 및 결제 취소요청</b></small>|<small><b>게시글 작성</b></small>|<small><b>관리자 페이지</b></small>|
-|![006](https://github.com/rhjdev/geulbeotmall/assets/95993932/d3d89f06-1a07-41e2-8d69-83ab172fdff0)|![007](https://github.com/rhjdev/geulbeotmall/assets/95993932/ed538d0d-1f0c-4bf5-8dfd-1543db876983)|![008](https://github.com/rhjdev/geulbeotmall/assets/95993932/82878195-95fc-43a2-ba78-9905f07f1240)|
 
 
 ### 🛠기술 스택
