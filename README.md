@@ -18,7 +18,7 @@
 * 24.6.13 - 24.7.2
 <hr/>
 
-### 
+### 🍾 
  - 팀장  : 진민장 - 계시글 기능, 마이페이지, 배송지 관리기능
  - 팀원1 : 조창성 - erd 설계, 장바구니, 구매, 결제 및 결제취소 기능 구현, 제품 관련 기능 구현
  - 팀원2 : 한승욱 - 관리자 페이지 기능 구현
@@ -28,6 +28,8 @@
  
 <hr/>
 
+### 💹페이지 순서도
+![페이지순서도](https://github.com/user-attachments/assets/05dfeb39-5935-45fa-b3e0-e9313f329316)
 
 ### 🎯서비스 핵심기능
 ```
@@ -39,7 +41,7 @@
 ```
 클릭시 유튜브 기술시연 영상   
    
- #1. [![로그인 및 회원가입]](https://youtu.be/vDreVqhy6dY:target="_blank")    
+ #1. [![로그인 및 회원가입]](https://youtu.be/vDreVqhy6dY:target="_blank")   
  #2. [!카테고리별 제품 조회, main 페이지 제품 추천](https://youtu.be/ZsKDU0IyimI){:target="_blank"}      
  #3. [!제품 장바구니 및 바로구매](https://youtu.be/KlHED1Shz_o){:target="_blank"}      
  #4. [!결제한 상품에대한 리뷰작성 및 결제 취소요청](https://youtu.be/o4BEff3XJDE){:target="_blank"}         
