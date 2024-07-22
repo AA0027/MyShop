@@ -76,7 +76,7 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 <br/><br/>
 
 ### 📖ERD
-<img src="[이미지주소.png](https://github.com/user-attachments/assets/08fe6d79-9dac-4707-beb5-0231c65c132e)" width="100" height="400"/>
+![erd](https://github.com/AA0027/Shop/issues/2#issue-2410671096)
 
 
 
