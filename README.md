@@ -1,17 +1,3 @@
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-</script>
-
-
 
 # 🛒NBE 쇼핑몰 (4인 팀 프로젝트) 
 <br/>
@@ -92,11 +78,20 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 ### 📖ERD
 ![erd](https://github.com/user-attachments/assets/f7eb54b5-6c95-43a7-b6e5-dac550953999)    
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 <div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e" alt="Slide 1"></div>
