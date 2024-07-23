@@ -77,17 +77,35 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 ### 📖ERD
 ![erd](https://github.com/user-attachments/assets/f7eb54b5-6c95-43a7-b6e5-dac550953999)    
 
-<div class="slideshow-container">
-    <div class="mySlides">
-        <img src="[slide1.jpg](https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e)">
-    </div>
-    <div class="mySlides">
-        <img src="[slide2.jpg](https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e)">
-    </div>
-    <div class="mySlides">
-        <img src="[slide3.jpg](https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e)">
-    </div>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e
+" alt="Slide 1"></div>
+    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/0035dea9-f99e-44cd-a0aa-64c9105bfc91
+" alt="Slide 2"></div>
+    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/924eef5b-2ae1-48c6-a0fc-ecb7f392f4da
+" alt="Slide 3"></div>
+    <!-- 추가적인 이미지 슬라이드들 -->
+  </div>
+  <!-- 슬라이더 네비게이션 등 추가 설정 -->
 </div>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e" alt="Slide 1"></div>
+    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/0035dea9-f99e-44cd-a0aa-64c9105bfc91" alt="Slide 2"></div>
+    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/924eef5b-2ae1-48c6-a0fc-ecb7f392f4da" alt="Slide 3"></div>
+    <!-- 추가적인 이미지 슬라이드들 -->
+  </div>
+  <!-- 슬라이더 네비게이션 등 추가 설정 -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+
 
 
 
