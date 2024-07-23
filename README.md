@@ -25,10 +25,10 @@
 <hr/>
 
 ### 💹페이지 순서도
-![페이지순서도](https://github.com/user-attachments/assets/05dfeb39-5935-45fa-b3e0-e9313f329316)   
+![페이지순서도](https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e)   
 <br/><br/><br/>
 
-<img src="https://github.com/AA0027/MyShop/issues/2#issue-2422963759"/> 
+
 
 ### 🎯서비스 핵심기능
 ```
