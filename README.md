@@ -75,7 +75,23 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 `AWS RDS` | EC2 서버에 연결할 DB 저버를 사용하기위하여 AWS 에서 제공하는 RDS 사용함
 
 ### 📖ERD
-![erd](https://github.com/user-attachments/assets/f7eb54b5-6c95-43a7-b6e5-dac550953999)
+![erd](https://github.com/user-attachments/assets/f7eb54b5-6c95-43a7-b6e5-dac550953999)    
+
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="[slide1.jpg](https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e)">
+    </div>
+    <div class="mySlides">
+        <img src="[slide2.jpg](https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e)">
+    </div>
+    <div class="mySlides">
+        <img src="[slide3.jpg](https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e)">
+    </div>
+</div>
+
+
+
+
 
 
 
