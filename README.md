@@ -80,30 +80,68 @@ Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for
 
 
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-</script>
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e" alt="Slide 1"></div>
-    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/0035dea9-f99e-44cd-a0aa-64c9105bfc91" alt="Slide 2"></div>
-    <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/924eef5b-2ae1-48c6-a0fc-ecb7f392f4da" alt="Slide 3"></div>
-    <!-- 추가적인 이미지 슬라이드들 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* CSS 스타일링 */
+    .swiper-container {
+      width: 100%;
+      height: 400px; /* 슬라이드의 높이 조정 */
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-slide img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/c61fc10a-b505-4ceb-a5bc-5f5e53b6d81e" alt="Slide 1"></div>
+      <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/924eef5b-2ae1-48c6-a0fc-ecb7f392f4da" alt="Slide 2"></div>
+      <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/ba7b4849-cc82-4a21-9b7b-0536d062e6f3" alt="Slide 3"></div>
+      <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/0035dea9-f99e-44cd-a0aa-64c9105bfc91" alt="Slide 3"></div>
+      <!-- 추가적인 이미지 슬라이드들 -->
+    </div>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-  <!-- 슬라이더 네비게이션 등 추가 설정 -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
-
+  
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
 
 
 
