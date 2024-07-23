@@ -15,12 +15,12 @@
 <hr/>
 
 ### 🍾역할 
--  <summary>erd 설계</summary>   
--  <summary>RestTemplate으로 외부의 API를 사용하여 데이터 수집</summary>   
--  <summary>상품 상세 페이지 및 카테고리 구현</summary>   
--  <summary>AJAX를 사용한 결제 및 취소 요청 구현</summary>   
--  <summary>AWS서버에 배포를위한 자동화 스크립트 작성</summary>     
--  <summary>기능 통합시 발생한 에러 해결</summary>     
+-  erd 설계  
+-  RestTemplate으로 외부의 API를 사용하여 데이터 수집  
+-  상품 상세 페이지 및 카테고리 구현   
+-  AJAX를 사용한 결제 및 취소 요청 구현   
+-  AWS서버에 배포를위한 자동화 스크립트 작성     
+-  기능 통합시 발생한 에러 해결     
  <br/><br/><br/>
 <hr/>
 
