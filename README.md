@@ -1,16 +1,14 @@
+# 🛒NBE 쇼핑몰 (4인 팀 프로젝트) 
+<br/>
 
-# ✉️ 실시간 채팅앱 <br/>
-
-### 💻프로젝트 개요 (기간 : 2024-07-24 ~ 2024-07-30
-💬취업준비하던중 Nosql 과 react 를 요구하는 회사들이 많아서 해당기술을 익히기위해서    
- 실시간채팅을 할수 있는 간단한 실시간 채팅앱을 제작하게 되었습니다.
+### 💻프로젝트 개요
+💬스프링 부트를 사용하여 고객들이 옷을 구매하고 자신의 코디를 올릴수 있는 쇼핑몰을 기획하여 개발하게됬습니다..
 - [x] [🍾 역할](#역할)
+- [x] [💹페이지 순서도](#페이지-순서도)
 - [x] [🎯서비스 핵심기능](#서비스-핵심기능)
 - [x] [🛠기술 스택](#기술-스택)
-- [x] [✨React](#react)
-- [x] [✨NoSQL](#nosql)
-- [x] [✨STOMP](#stomp) 
-- [x] [🎓마무리](#마무리) 
+- [x] [✨기술적 의사결정](#기술적-의사결정)
+- [x] [📖ERD](#erd)
 
 
 <br/><br/><br/>
@@ -26,59 +24,54 @@
  <br/><br/><br/>
 <hr/>
 
+### 💹페이지 순서도
+![페이지순서도](https://github.com/user-attachments/assets/05dfeb39-5935-45fa-b3e0-e9313f329316)   
+<br/><br/><br/>
+
+
 
 ### 🎯서비스 핵심기능
 ```
->회원가입한 사용자만 이용가능
->채팅방 생성및 삭제가능
->사용자들간 실시간 채팅기능
+👨‍👨‍👧 회원 : 로그인 | 회원가입 | 소셜 로그인(네이버) 
+🏡 마이페이지 : 주문 조회 | 리뷰 등록 | 배송지 목록수정 | 회원정보수정 
+💰 상품 : 사용자들이 많이 선택한 제품 확인 | 카테고리별 조회, 장바구니, 바로주문
+🚧 계시판 : 1:1문의 등록,수정,삭제 | 글·댓글내용/작성자/첨부파일명/말머리별 게시판 검색 | 작성자/관리자 한정 게시글 조회 | 댓글 및 대댓글 등록,수정,삭제,실시간 알림
+📈 관리자페이지 : 가입한 회원 정보확인 | 회원 활성화/비활성화 가능 | 회원 등급 변경가능 | 구매자 주문내역 확인 | 구매자 취소요청 환불처리 | 회원 상품문의 확인 및 답변|
 ```
 클릭시 유튜브 기술시연 영상   
-   
+
  >#1.[로그인 및 회원가입](https://youtu.be/vDreVqhy6dY)    
+ >#2.[카테고리별 제품 조회, main 페이지 제품 추천](https://youtu.be/ZsKDU0IyimI)     
+ >#3.[제품 장바구니 및 바로구매](https://youtu.be/KlHED1Shz_o)           
+ >#4.[결제한 상품에대한 리뷰작성 및 결제 취소요청](https://youtu.be/o4BEff3XJDE)         
+ >#5.[게시글 작성](https://youtu.be/c3nrzZ5vNZc)      
+ >#6.[관리자 페이지](https://youtu.be/fKTIbY95Gr8) 
 
 <br/><br/>
 ### 🛠기술 스택
 OS | Windows 10
 --- | --- |
-Language | ![Java](https://img.shields.io/badge/JAVA-000?style=for-the-badge&logo=java&logoColor=white) ![Spring](https://img.shields.io/badge/Spring-000?style=for-the-badge&logo=spring&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-000?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-000?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-000?style=for-the-badge&logo=javascript&logoColor=white) ![react](https://img.shields.io/badge/React-61DAFB?style=for-the-badge)
+Language | ![Java](https://img.shields.io/badge/JAVA-000?style=for-the-badge&logo=java&logoColor=white) ![Spring](https://img.shields.io/badge/Spring-000?style=for-the-badge&logo=spring&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-000?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-000?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-000?style=for-the-badge&logo=javascript&logoColor=white)
 IDE | ![STS4](https://img.shields.io/badge/STS4-000?style=for-the-badge&logo=spring&logoColor=white) ![intellijidea](https://img.shields.io/badge/Intellij-000?style=for-the-badge&logo=intellijidea&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-000?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-Framework | ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) 
+Framework | ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![MyBatis](https://img.shields.io/badge/Mybatis-d40000?style=for-the-badge)
 Build Tool | ![Static Badge](https://img.shields.io/badge/Gradle-%2302303A?style=for-the-badge)
-Database | ![Mysql Database 8](https://img.shields.io/badge/MySql-F80000?style=for-the-badge) ![Mongodb](https://img.shields.io/badge/Mongodb-47A248?style=for-the-badge)
-Frontend | ![HTML5](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![reactbootstrap](https://img.shields.io/badge/reactbootstrap-41E0FD?style=for-the-badge&logo=reactbootstrap&logoColor=black)
-Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white) |   
-
+Database | ![Mysql Database 8](https://img.shields.io/badge/MySql-F80000?style=for-the-badge)
+Frontend | ![HTML5](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+Library | ![Spring Security](https://img.shields.io/badge/spring%20security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white) ![Thymeleaf](https://img.shields.io/badge/thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white)
+API | ![Iamport Payment](https://img.shields.io/badge/Iamport%20Payment-c1272d?style=for-the-badge) ![Font Awesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white) ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+Server |![Apache Tomcat 9.0](https://img.shields.io/badge/Apache%20Tomcat%20-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=black) ![amazonec2](https://img.shields.io/badge/amazonec2-c1272d?style=for-the-badge&logo=amazonec2&logoColor=white) ![amazonrds](https://img.shields.io/badge/amazonRDS-c1272d?style=for-the-badge&logo=amazonrds&logoColor=white) 
+Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)
 <br/><br/>
-### ✨React
-Reac학습하기전에 왜 많은 회사들이 react를 요구하는지 react의 특징을 알아보았다. 
-react를 사용하기전 웹 동작 방식(SSR)
-1. 서버측에서 'VIEW'를 만들어서 받고 브라우저는 받은 'VIEW'를 화면에 그려주는 방식으로 동작을 하였다.   
-2. 일단 'VIEW'를 받은뒤, 화면의 부분변경이 필요한 부분을 AJAX요청 하여 받아서 변경하고 JavaScript를 사용하여
-   AJAX 요청, 응답받은뒤에이를 기반으로 화면을 변경하는 동작
+### ✨기술적 의사결정
+선택기술 | 선택이유 및 근거
+--- | --- |
+`RestTemplate` | 제품 구매바로가기와 장바구니 기능에대해 서버에 응답을 요청하여 구매바로가기, 장바구니 담을떄도 있는지 없는지에대한 응답값에 따른 처리를 하기위하여 사용
+`Cookie` | 제품 상세페이지에서 해당 제품에대해 평소에 display가 none 인 리뷰들을 페이지네이션하였을떄 페이지 이동시 dispaly의 값이 none으로 변경되어 cookie에 리뷰에 담겨있는 div의 속석을 저장하여 페이지이동시에도 리뷰목록 display 속성 유지하고자 함
+`SecurityContextHolder` | 서비스 동작시 로그인한 사용자의 정보를 얻고자 사용. SecurityContextHolder에서 Context를 얻은후 Authentication에서 Principle 정보를 얻을수 있다.
+`ajax` | 사용 결제 요청시 사용자 정보 및 상품정보를 서버에 전달하기 위하여 ajax 를 사용함.
+`RestTemplate` | API를 사용하여 의류상품들의 정보를 얻거나 결제, 취소요청 등을 하기위하여 사용함.
+`AWS EC2` | 프로젝트 배포실습을위하여 무료로 사용할수 있는 EC2 서버에 자동화 배포 스크립트 작성하여 팀원들이 언제든지 기능 테스트를 사용하기위하여 사용함.
+`AWS RDS` | EC2 서버에 연결할 DB 저버를 사용하기위하여 AWS 에서 제공하는 RDS 사용함
 
-   하지만...
-   'VIEW'가 복잡한 경우 AJAX를 통한 응답, 그리고 이를 기반으로 변경이 복잡해질경우 1번과 마찬가지로 서버에 부하가 많이가
-   떄문에 부하분산하기위해 사용하였다.
-
-React 핵심컨셉 (SPA) : 데이터 변경감지 -> UI가 자동 업데이트 되게 하기 (Observer 패턴) react는 데이터 변경을 감지하는 엔진 역할 수행, 계속 작동해야 하는 데몬 프로세스다(Node.js필요) 
-
-따라서 데이터 변경감지를 하기위하여 여러 Hook들을 사용하여 상태 변수들을 관리하였다.      
-ex) useState, useRef, useEffect...
-
-### ✨NoSQL
-
-### ✨STOMP
-실시간 통신을 구현하기위해 HTTP통신은 비연결성, 무상태성, 단방향통신 등의 특징으로 인하여 소켓 통신을 사용하기로 하였다.
-STOMP는 간단한 메시지를 전송하기 위한 프로토콜로 메시지 브로커와 publisher(발행자) - subscriber(수신자) 방식을 사용한다.
-수신자는 /sub 경로를 구독, 발행자는 /sub 또는 /pub 으로 메시지를 보낸다.   
-만약 발행자가 /sub 경로로 메시지를 보내면 바로 수신자에게 도착하고 /pub 경로로 메시지를 보내면 가공을 한 다음 보내게 된다.
-
-
-### 🎓마무리
-시간상의 문제로 생각하는 모든 기능을 구현하지는 못했지만 nosql, react 을 학습하기위하여 프로젝트를 진해보았다. 
-다음 프로젝트는 JWT토큰 기반으로 인증을 진행하는 사내메신저를 기획하고 구현해보고싶고 이번 프로젝트로 인하여
-새로운 방식으로 개발을 하게되어서 재미있었고 더 깔끔하고 중복되는 부분이 없도록 작성할수 있었다는 아쉬움이 남았다.
-
-
-
+### 📖ERD
+![erd](https://github.com/user-attachments/assets/f7eb54b5-6c95-43a7-b6e5-dac550953999)    
